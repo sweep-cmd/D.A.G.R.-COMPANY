@@ -113,6 +113,7 @@ body::before{
 
 .chips{display:flex; flex-wrap:wrap; gap:8px}
 .chip{border:1px solid var(--line); background:var(--panel); padding:3px 10px; color:var(--asp)}
+.chip.res{color:var(--dim)}
 .chip.hit{outline:1px solid var(--accent); color:var(--text)}
 .chip.dim{opacity:.28}
 
@@ -224,7 +225,7 @@ var HITMAN = {
                        ["GR","BRAXYYY","Hitman 2-1","FNG"],["MED","Foo","Hitman 2-1M","VET","Oracle 1-3"]] },
       { name:"2-2", m:[["TL","AX3","Hitman 2-2","VET"],["MG","Volki3","Hitman 2-2","VET"],["AMG","lando","Hitman 2-2","VET"],
                        ["GR","SixG_KV","Hitman 2-2","VET"],["AMED","","Hitman 2-2M","","Oracle 1-4"]] },
-      { name:"2-3", m:[["TL","Snow","Hitman 2-3","NONE"],["MRK","Bacha","Hitman 2-3","VET"],["AMG","cashlessdrake46","Hitman 2-3","NONE"],
+      { name:"2-3", m:[["TL","Snow","Hitman 2-3","NONE"],["MRK","","Hitman 2-3",""],["AMG","cashlessdrake46","Hitman 2-3","NONE"],
                        ["GR","","Hitman 2-3",""],["GR","","Hitman 2-3",""],["AMED","","Hitman 2-3M","","Oracle 1-5"]] }
     ]},
     { name:"Cobra", num:"Hitman 3", tag:"Combat engineers", u:"#4f86e8", teams:[
@@ -320,6 +321,9 @@ var COMMS = [
   ["Hitman 2",42,41.8,"Immediate/Priority","#22d822"],["Hitman 2-1",41.6,41.4,"Priority/Routine","#b3d9a6",1],["Hitman 2-2",41.2,41,"Priority/Routine","#8fc47a",1],
   ["Hitman 3",40.8,40.6,"Immediate/Priority","#c9dde0"],["Hitman 3-1",40.4,40.2,"Priority/Routine","#c5d8f2",1],["Hitman 3-2",40,39.8,"Priority/Routine","#9dbcf0",1],["Hitman 3-3",39.6,39.4,"Priority/Routine","#6f9ae8",1]
 ];
+
+/* Standby players: still members, not holding a slot. They feed Bulwark as slots open. */
+var RESERVES = ["Bacha"];
 
 var ASPIRANTS = ["Tickler","TheKushWizard","+Red+","THCloudz","Hatred","GRXXN","TwiiSTFAME",
   "JFSmith09","UnknownNazzyyy","PastelPanduh","StarFins","Hairryballz","viper2846","66","! Miltoc",
@@ -491,12 +495,20 @@ function build(){
   s7.appendChild(chips);
   root.appendChild(s7);
 
+  // Reserve list
+  var s8 = section("Reserve list", "Standby · feeds Bulwark as slots open");
+  var rchips = el("div", "chips");
+  RESERVES.forEach(function(n){ var c = el("span", "chip res", n); c.dataset.find = n.toLowerCase(); rchips.appendChild(c); });
+  if (!RESERVES.length) rchips.appendChild(el("span", "chip res", "nobody on standby"));
+  s8.appendChild(rchips);
+  root.appendChild(s8);
+
   // Stats
   var people = Object.keys(TALLY.names).length;
   var stats = [
     [people, "members slotted"],
     [TALLY.filled + "/" + TALLY.slots, "slots filled"],
-    [ASPIRANTS.length, "aspirants"],
+    [ASPIRANTS.length + " / " + RESERVES.length, "aspirants / reserve"],
     [COMMS.length, "radio nets"]
   ];
   var sb = document.getElementById("stats");
