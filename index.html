@@ -164,7 +164,7 @@ footer p{margin:2px 0}
 
   <header class="banner">
     <h1 class="hd">D.A.G.R. Company</h1>
-    <p class="sub">Roster // Last updated 2026-09-28</p>
+    <p class="sub">Roster // Last updated 2026-09-29</p>
     <p class="motto">Death Walks Beside Us</p>
   </header>
 
@@ -210,44 +210,52 @@ var COMMAND = [
 
 var HITMAN = {
   hq: [["PL","SWEEP","Hitman 7","LDR"],["PSG","GROWBIGGER","Hitman 6","LDR"],["RTO","","Hitman 5R",""],
-       ["PM","Rambo125","Hitman 7M","REG","Oracle 1-7M"],["APM","","Hitman 7N","","Oracle 2-7N"]],
+       ["PM","Rambo125","Hitman 7M","NONE","Oracle 1-7M"],["APM","","Hitman 7N","","Oracle 2-7N"]],
   squads: [
     { name:"Vanguard", num:"Hitman 1", tag:"Rifle squad", u:"#e04848", teams:[
-      { name:"1-1", m:[["SL","KNIGHT","Hitman 1-1","LDR"],["AR","Nxxy","Hitman 1-1","VET"],["GR","entry","Hitman 1-1","REG"],["GR","AmaZzeX","Hitman 1-1","FNG"],["MED","lx.666","Hitman 1-1M","VET","Oracle 1-1"]] },
-      { name:"1-2", m:[["FTL","Apois","Hitman 1-2","VET"],["GR","SixG_KV","Hitman 1-2","VET"],["GR","DOPENATION814","Hitman 1-2","FNG"],["MRK","GavinoRok","Hitman 1-2","VET"],["AMED","","Hitman 1-2M","","Oracle 1-2"]] }
+      { name:"1-1", m:[["SL","BOYBLUE","Hitman 1-1","LDR"],["AR","Witch","Hitman 1-1","NONE"],["AR","Nxxy","Hitman 1-1","VET"],
+                       ["GR","BLU","Hitman 1-1","NONE"],["GR","splashy","Hitman 1-1","VET"],["GR","DOPENATION814","Hitman 1-1","REG"],
+                       ["MED","Marlboros","Hitman 1-1M","VET","Oracle 1-1"]] },
+      { name:"1-2", m:[["FTL","KNIGHT","Hitman 1-2","LDR"],["GR","entry","Hitman 1-2","REG"],["GR","AmaZzeX","Hitman 1-2","FNG"],
+                       ["GR","DeviousPFO","Hitman 1-2","VET"],["MRK","","Hitman 1-2",""],["AMED","","Hitman 1-2M","","Oracle 1-2"]] }
     ]},
-    { name:"Bandit", num:"Hitman 2", tag:"Rifle squad", u:"#3fbf3f", teams:[
-      { name:"2-1", m:[["SL","BOYBLUE","Hitman 2-1","LDR"],["AR","SaltyXpress","Hitman 2-1","VET"],["GR","lando","Hitman 2-1","REG"],["GR","Witch","Hitman 2-1","FNG"],["MED","Sham","Hitman 2-1M","VET","Oracle 1-3"]] },
-      { name:"2-2", m:[["TL","AX3","Hitman 2-2","VET"],["GR","DeviousPFO","Hitman 2-2","VET"],["GR","Carrots_GoneWild","Hitman 2-2","FNG"],["MRK","Bacha","Hitman 2-2","VET"],["AMED","","Hitman 2-2M","","Oracle 1-4"]] }
+    { name:"Bandit", num:"Hitman 2", tag:"Weapons team", u:"#3fbf3f", teams:[
+      { name:"2-1", m:[["SL","Carrots_GoneWild","Hitman 2-1","REG"],["MG","GavinoRok","Hitman 2-1","VET"],["AMG","Bradz","Hitman 2-1","NONE"],
+                       ["GR","BRAXYYY","Hitman 2-1","FNG"],["MED","Foo","Hitman 2-1M","VET","Oracle 1-3"]] },
+      { name:"2-2", m:[["TL","AX3","Hitman 2-2","VET"],["MG","Volki3","Hitman 2-2","VET"],["AMG","lando","Hitman 2-2","VET"],
+                       ["GR","SixG_KV","Hitman 2-2","VET"],["AMED","","Hitman 2-2M","","Oracle 1-4"]] },
+      { name:"2-3", m:[["TL","Snow","Hitman 2-3","NONE"],["MRK","Bacha","Hitman 2-3","VET"],["AMG","cashlessdrake46","Hitman 2-3","NONE"],
+                       ["GR","","Hitman 2-3",""],["GR","","Hitman 2-3",""],["AMED","","Hitman 2-3M","","Oracle 1-5"]] }
     ]},
-    { name:"Combat Engineers", num:"Hitman 3", tag:"New squad, forming", u:"#f0a24e", teams:[
-      { name:"3-1", m:[["SL","Overlord2","Hitman 3-1","VET"],["AR","","Hitman 3-1",""],["CE","","Hitman 3-1",""],["CE","","Hitman 3-1",""],["MED","","Hitman 3-1M","","Oracle 2-1"]] },
-      { name:"3-2", m:[["TL","","Hitman 3-2",""],["AR","","Hitman 3-2",""],["CE","","Hitman 3-2",""],["CE","","Hitman 3-2",""],["AMED","","Hitman 3-2M","","Oracle 2-2"]] }
-    ]},
-    { name:"Cobra", num:"Hitman 4", tag:"Weapons team", u:"#4f86e8", teams:[
-      { name:"4-1", m:[["SL","FRO$TY","Hitman 4-1","LDR"],["MG","Volki3","Hitman 4-1","VET"],["AMG","cashlessdrake46","Hitman 4-1","NONE"],["GR","oak","Hitman 4-1","REG"],["MED","splashy","Hitman 4-1M","VET","Oracle 2-3"]] },
-      { name:"4-2", m:[["TL","Foo","Hitman 4-2","VET"],["MG","","Hitman 4-2",""],["AMG","","Hitman 4-2",""],["GR","DayneBDickin.v2","Hitman 4-2","VET"],["AMED","","Hitman 4-2M","","Oracle 2-4"]] },
-      { name:"4-3", m:[["TL","Marlboros","Hitman 4-3","VET"],["MRK","","Hitman 4-3",""],["HAT","Am1sco","Hitman 4-3","VET"],["HAT","","Hitman 4-3",""],["AMED","","Hitman 4-3M","","Oracle 2-5"]] }
+    { name:"Cobra", num:"Hitman 3", tag:"Combat engineers", u:"#4f86e8", teams:[
+      { name:"3-1", m:[["SL","Overlord2","Hitman 3-1","VET"],["CE","Porky","Hitman 3-1","NONE"],["CE","voixdv","Hitman 3-1","NONE"],
+                       ["GR","lx.666","Hitman 3-1","VET"],["MED","Apois","Hitman 3-1M","NONE","Oracle 2-1"]] },
+      { name:"3-2", m:[["TL","FRO$TY","Hitman 3-2","LDR"],["CE","strike","Hitman 3-2","NONE"],["CE","","Hitman 3-2",""],
+                       ["GR","DayneBDickin.v2","Hitman 3-2","VET"],["AMED","","Hitman 3-2M","","Oracle 2-2"]] },
+      { name:"3-3", m:[["TL","SaltyXpress","Hitman 3-3","VET"],["CE","","Hitman 3-3",""],["GR","","Hitman 3-3",""],
+                       ["GR","","Hitman 3-3",""],["AMED","","Hitman 3-3M","","Oracle 2-3"]] }
     ]}
   ]
 };
 
-var WHIPLASH = { name:"Whiplash 1-1", tag:"SSO recon / sabotage", u:"#7b5cc4", teams:[
-  { name:"1-1", m:[["RSL","STORM241","Whiplash 1-1","LDR"],["RSPC","Feezy.eg","Whiplash 1-1","VET"],["RSPC","","Whiplash 1-1",""],["RSPC","Digital_smoke7","Whiplash 1-1","REG"],["RMED","","Acolyte 7",""]] },
+var WHIPLASH = { name:"Whiplash 1-1", tag:"SSO recon / sabotage · by selection only", u:"#7b5cc4", teams:[
+  { name:"1-1", m:[["RSL","STORM241","Whiplash 1-1","LDR"],["RSPC","Feezy.eg","Whiplash 1-1","VET"],["RSPC","Digital_smoke7","Whiplash 1-1","REG"],
+                   ["RSPC","Piloto","Whiplash 1-1","FNG"],["RMED","Booby","Acolyte 7","REG"]] },
   { name:"1-2", m:[["RTL","Ski","Whiplash 1-2","NONE"],["SNP","Echo Victor","Whiplash 1-2","VET"],["SNP","","Whiplash 1-2",""],["RMED","","Acolyte 6",""]] }
 ]};
 
 var ANVIL = {
-  hq: [["XO","","Anvil 7",""],["RTO","","Anvil 5R",""]],
+  hq: [["XO","CainFPSx","Anvil 7","VET"],["RTO","","Anvil 5R",""]],
   cards: [
-    { name:"Anvil Fires", tag:"Artillery", u:"#c9452c", teams:[
-      { name:"1-1", m:[["SC","","Anvil 1-1",""],["ART","","Anvil 1-1",""],["ART","","Anvil 1-1",""]] },
-      { name:"1-2", m:[["SC","","Anvil 1-2",""],["ART","","Anvil 1-2",""],["ART","","Anvil 1-2",""]] } ]},
     { name:"Anvil Motorized", tag:"Vehicle crews", u:"#8c2a1c", teams:[
-      { name:"2-1", m:[["CC","Scorin","Anvil 2-1","VET"],["CRW","Booby","Anvil 2-1","REG"],["CRW","CainFPSx","Anvil 2-1","REG"],["CRW","","Anvil 2-1",""],["CRW","","Anvil 2-1",""],
+      { name:"2-1", m:[["CC","Sham","Anvil 2-1","VET"],["CRW","widow","Anvil 2-1","NONE"],["CRW","rotten","Anvil 2-1","NONE"],
+                       ["CRW","Dunks","Anvil 2-1","NONE"],["CRW","Scorin","Anvil 2-1","VET"],
                        ["MECH","","Anvil 2-1L",""],["ENG","","Anvil 2-1E",""],["ENG","","Anvil 2-1E",""]] } ]},
+    { name:"Anvil Fires", tag:"Artillery", u:"#c9452c", teams:[
+      { name:"1-1", m:[["SC","","Anvil 1-1",""],["ART","Proxy","Anvil 1-1","NONE"],["ART","","Anvil 1-1",""]] },
+      { name:"1-2", m:[["SC","","Anvil 1-2",""],["ART","","Anvil 1-2",""],["ART","","Anvil 1-2",""]] } ]},
     { name:"Anvil Eagles", tag:"Drones", u:"#e8866a", teams:[
-      { name:"3-1", m:[["TL","","Anvil 3-1",""],["DRN","","Anvil 3-1",""],["DRN","","Anvil 3-1",""],["DT","","Anvil 3-1T",""]] } ]}
+      { name:"3-1", m:[["TL","Am1sco","Anvil 3-1","VET"],["DRN","Convey","Anvil 3-1","NONE"],["DRN","","Anvil 3-1",""],["DT","","Anvil 3-1T",""]] } ]}
   ]
 };
 
@@ -255,38 +263,49 @@ var PROPHET = {
   hq: [["CMO","Dexter","Prophet 7","NONE"],["ECS","","Prophet 6",""],["RTO","","Prophet 5R",""],["PJTL","","Disciple 7",""]],
   cards: [
     { name:"Oracle", tag:"Hitman medics", u:"#9d86d4", teams:[
-      { name:"1st", m:[["PM","Rambo125","Oracle 1-7M","REG","Hitman 7M"],["FM","lx.666","Oracle 1-1","VET","Hitman 1-1M"],["FM","","Oracle 1-2","","Hitman 1-2M"],["FM","Sham","Oracle 1-3","VET","Hitman 2-1M"],["FM","","Oracle 1-4","","Hitman 2-2M"]] },
-      { name:"2nd", m:[["APM","","Oracle 2-7N","","Hitman 7N"],["FM","","Oracle 2-1","","Hitman 3-1M"],["FM","","Oracle 2-2","","Hitman 3-2M"],["FM","splashy","Oracle 2-3","VET","Hitman 4-1M"],["FM","","Oracle 2-4","","Hitman 4-2M"],["FM","","Oracle 2-5","","Hitman 4-3M"]] } ]},
+      { name:"1st", m:[["PM","Rambo125","Oracle 1-7M","NONE","Hitman 7M"],["FM","Marlboros","Oracle 1-1","VET","Hitman 1-1M"],["FM","","Oracle 1-2","","Hitman 1-2M"],
+                       ["FM","Foo","Oracle 1-3","VET","Hitman 2-1M"],["FM","","Oracle 1-4","","Hitman 2-2M"],["FM","","Oracle 1-5","","Hitman 2-3M"]] },
+      { name:"2nd", m:[["APM","","Oracle 2-7N","","Hitman 7N"],["FM","Apois","Oracle 2-1","NONE","Hitman 3-1M"],["FM","","Oracle 2-2","","Hitman 3-2M"],
+                       ["FM","","Oracle 2-3","","Hitman 3-3M"]] } ]},
     { name:"Avatar", tag:"Bulwark medics", u:"#6a3fb0", teams:[
-      { name:"1st", m:[["PM","","Avatar 1-7","","Bulwark 7M"],["FM","","Avatar 1-1","","Bulwark 1-1M"],["FM","","Avatar 1-2","","Bulwark 1-2M"],["FM","","Avatar 1-3","","Bulwark 2-1M"],["FM","","Avatar 1-4","","Bulwark 2-2M"]] },
-      { name:"2nd", m:[["APM","","Avatar 2-7","","Bulwark 7N"],["FM","","Avatar 2-1",""],["FM","","Avatar 2-2",""],["FM","","Avatar 2-3","","Bulwark 3-1M"],["FM","","Avatar 2-4","","Bulwark 3-2M"],["FM","","Avatar 2-5","","Bulwark 3-3M"]] } ]},
+      { name:"1st", m:[["PM","","Avatar 1-7","","Bulwark 7M"],["FM","","Avatar 1-1","","Bulwark 1-1M"],["FM","Soviet","Avatar 1-2","NONE","Bulwark 1-2M"],
+                       ["FM","","Avatar 1-3","","Bulwark 2-1M"],["FM","","Avatar 1-4","","Bulwark 2-2M"]] },
+      { name:"2nd", m:[["APM","","Avatar 2-7","","Bulwark 7N"],["FM","","Avatar 2-1","","Bulwark 3-1M"],["FM","","Avatar 2-2","","Bulwark 3-2M"],
+                       ["FM","","Avatar 2-3","","Bulwark 4-1M"],["FM","","Avatar 2-4","","Bulwark 4-2M"],["FM","","Avatar 2-5","","Bulwark 4-3M"]] } ]},
     { name:"Disciple", tag:"Pararescue", u:"#3f8a96", teams:[
       { name:"PJ", m:[["PJTL","","Disciple 7","","",1],["PJ","","Disciple 4",""],["PJ","","Disciple 3",""],["PJ","","Disciple 2",""],["PJ","","Disciple 1",""]] } ]},
     { name:"Saint", tag:"Trauma team", u:"#f07a1a", teams:[
       { name:"TT", m:[["TTL","","Saint 7M",""],["TTS","","Saint 7N",""],["TTD","","Saint 7O",""]] } ]},
     { name:"Acolyte", tag:"SOCM medics, attached to Whiplash", u:"#f2b36e", teams:[
-      { name:"SOCM", m:[["SOCM","","Acolyte 7","","Whiplash 1-1"],["SOCM","","Acolyte 6","","Whiplash 1-2"]] } ]}
+      { name:"SOCM", m:[["SOCM","Booby","Acolyte 7","REG","Whiplash 1-1"],["SOCM","","Acolyte 6","","Whiplash 1-2"]] } ]}
   ]
 };
 
-function rifleSquad(n, second){ // Bulwark squads mirror Hitman's
-  var b = "Bulwark " + n + "-";
-  return [
-    { name:n+"-1", m:[["SL","",b+"1",""],[second?"MG":"AR","",b+"1",""],["GR","",b+"1",""],["GR","",b+"1",""],["MED","",b+"1M",""]] },
-    { name:n+"-2", m:[["FTL","",b+"2",""],["GR","",b+"2",""],["GR","",b+"2",""],["MRK","",b+"2",""],["AMED","",b+"2M",""]] }
-  ];
-}
 var BULWARK = {
   hq: [["PL","","Bulwark 7",""],["PSG","","Bulwark 6",""],["RTO","","Bulwark 5R",""],["PM","","Bulwark 7M","","Avatar 1-7"],["APM","","Bulwark 7N","","Avatar 2-7"]],
   squads: [
-    { name:"Bulwark 1", num:"", tag:"Rifle squad", u:"#5f9e3a", teams: rifleSquad(1) },
-    { name:"Bulwark 2", num:"", tag:"Rifle squad", u:"#7f5fbf", teams: rifleSquad(2, true) },
-    { name:"Bulwark 3", num:"", tag:"Squad slots still being defined", u:"#b04d7a", teams:[
-      { name:"3-1", m:[["SL","","Bulwark 3-1",""]] } ]},
+    { name:"Bastion", num:"Bulwark 1 · DAGR 4", tag:"Rifle squad", u:"#5f9e3a", teams:[
+      { name:"1-1", m:[["SL","Red","Bulwark 1-1","NONE"],["AR","Daniel","Bulwark 1-1","NONE"],["GR","dmt","Bulwark 1-1","NONE"],
+                       ["GR","ALIEN","Bulwark 1-1","NONE"],["MED","","Bulwark 1-1M","","Avatar 1-1"]] },
+      { name:"1-2", m:[["FTL","","Bulwark 1-2",""],["GR","oak","Bulwark 1-2","REG"],["GR","Dom","Bulwark 1-2","NONE"],
+                       ["MRK","","Bulwark 1-2",""],["AMED","Soviet","Bulwark 1-2M","NONE","Avatar 1-2"]] }
+    ]},
+    { name:"Rampart", num:"Bulwark 2 · DAGR 5", tag:"Rifle squad", u:"#7f5fbf", teams:[
+      { name:"2-1", m:[["SL","X","Bulwark 2-1","NONE"],["MG","JØTA","Bulwark 2-1","NONE"],["GR","","Bulwark 2-1",""],
+                       ["GR","","Bulwark 2-1",""],["MED","","Bulwark 2-1M","","Avatar 1-3"]] },
+      { name:"2-2", m:[["FTL","","Bulwark 2-2",""],["GR","","Bulwark 2-2",""],["GR","","Bulwark 2-2",""],
+                       ["MRK","","Bulwark 2-2",""],["AMED","","Bulwark 2-2M","","Avatar 1-4"]] }
+    ]},
+    { name:"Citadel", num:"Bulwark 3 · DAGR 6", tag:"Rifle squad", u:"#b04d7a", teams:[
+      { name:"3-1", m:[["SL","","Bulwark 3-1",""],["AR","","Bulwark 3-1",""],["GR","","Bulwark 3-1",""],
+                       ["GR","","Bulwark 3-1",""],["MED","","Bulwark 3-1M","","Avatar 2-1"]] },
+      { name:"3-2", m:[["FTL","","Bulwark 3-2",""],["GR","","Bulwark 3-2",""],["GR","","Bulwark 3-2",""],
+                       ["MRK","","Bulwark 3-2",""],["AMED","","Bulwark 3-2M","","Avatar 2-2"]] }
+    ]},
     { name:"Bulwark 4", num:"", tag:"Weapons team", u:"#c24a33", teams:[
-      { name:"4-1", m:[["SL","","Bulwark 4-1",""],["MG","","Bulwark 4-1",""],["AMG","","Bulwark 4-1",""],["GR","","Bulwark 4-1",""],["MED","","Bulwark 4-1M",""]] },
-      { name:"4-2", m:[["TL","","Bulwark 4-2",""],["MG","","Bulwark 4-2",""],["AMG","","Bulwark 4-2",""],["GR","","Bulwark 4-2",""],["AMED","","Bulwark 4-2M",""]] },
-      { name:"4-3", m:[["TL","","Bulwark 4-3",""],["MRK","","Bulwark 4-3",""],["HAT","","Bulwark 4-3",""],["HAT","","Bulwark 4-3",""],["AMED","","Bulwark 4-3M",""]] } ]}
+      { name:"4-1", m:[["SL","","Bulwark 4-1",""],["MG","","Bulwark 4-1",""],["AMG","","Bulwark 4-1",""],["GR","","Bulwark 4-1",""],["MED","","Bulwark 4-1M","","Avatar 2-3"]] },
+      { name:"4-2", m:[["TL","","Bulwark 4-2",""],["MG","","Bulwark 4-2",""],["AMG","","Bulwark 4-2",""],["GR","","Bulwark 4-2",""],["AMED","","Bulwark 4-2M","","Avatar 2-4"]] },
+      { name:"4-3", m:[["TL","","Bulwark 4-3",""],["MRK","","Bulwark 4-3",""],["HAT","","Bulwark 4-3",""],["HAT","","Bulwark 4-3",""],["AMED","","Bulwark 4-3M","","Avatar 2-5"]] } ]}
   ]
 };
 
@@ -303,8 +322,8 @@ var COMMS = [
 ];
 
 var ASPIRANTS = ["Tickler","TheKushWizard","+Red+","THCloudz","Hatred","GRXXN","TwiiSTFAME","voixdv",
-  "JFSmith09","UnknownNazzyyy","PastelPanduh","StarFins","Piloto","Hairryballz","viper2846","Snow",
-  "BRAXYYY","66","! Miltoc","Aiden","Treto","Xavier","Dankttv"];
+  "JFSmith09","UnknownNazzyyy","PastelPanduh","StarFins","Hairryballz","viper2846","66","! Miltoc",
+  "Aiden","Treto","Xavier","Dankttv","strike"];
 
 var ROLES = [
   ["CO","Commanding Officer"],["XO","Executive Officer"],["OPM","Operations Manager"],
@@ -318,6 +337,7 @@ var ROLES = [
   ["CMO","Chief Medical OX"],["ECS","ECS"],["PJTL","Pararescue Team Leader"],["PJ","Pararescue Jumper"],["FM","Field Medic"],
   ["TTL","Trauma Team Leader"],["TTS","Trauma Team Surgeon"],["TTD","Trauma Team Driver"],["SOCM","Special Operations Combat Medic"]
 ];
+
 /* ---------- END EDIT ---------- */
 
 var TIER_LABEL = { LDR:"★ LDR", VET:"◆ VET", REG:"REG", FNG:"○ FNG", ASP:"ASP", NONE:"—", "":"" };
