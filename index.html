@@ -9,9 +9,6 @@
 <meta property="og:description" content="Death Walks Beside Us. Company roster, squads, comms card and aspirants.">
 <meta name="theme-color" content="#e7c231">
 <title>D.A.G.R. Company // Roster</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Saira+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Terminal roster sheet: one column of unit sections, cards per squad, slots as rows (role · name · callsign · tier). */
 :root{
@@ -193,6 +190,7 @@ footer p{margin:2px 0}
   <footer>
     <p class="motto">"Death Walks Beside Us"</p>
     <p>// SWEEP · D.A.G.R 7 //</p>
+    <p>Unofficial fan-made Arma Reforger unit. Not affiliated with Bohemia Interactive or any military or government. Members must be 18+. Names shown are in-game handles; ask SWEEP or GROWBIGGER to have yours changed or removed.</p>
     <p>&gt;&gt;&gt; END TRANSMISSION</p>
   </footer>
 </div>
@@ -327,7 +325,7 @@ var RESERVES = ["Bacha"];
 
 var ASPIRANTS = ["Tickler","TheKushWizard","+Red+","THCloudz","Hatred","GRXXN","TwiiSTFAME",
   "JFSmith09","UnknownNazzyyy","PastelPanduh","StarFins","Hairryballz","viper2846","66","! Miltoc",
-  "Aiden","Treto","Xavier","Dankttv","strike"];
+  "Aiden","Treto","Xavier","Dankttv"];
 
 var ROLES = [
   ["CO","Commanding Officer"],["XO","Executive Officer"],["OPM","Operations Manager"],
@@ -470,7 +468,7 @@ function build(){
   root.appendChild(s5);
 
   // Comms card
-  var s6 = section("Communications Card", "Primary (FQ) and secondary (SFQ) frequencies");
+  var s6 = section("Communications Card", "In-game radio frequencies only · primary (FQ) and secondary (SFQ)");
   var box = el("div", "comms"), tbl = el("table"), thead = el("thead"), hr = el("tr");
   [["Channel",""],["FQ","num"],["SFQ","num"],["Priority",""]].forEach(function(h){ var th = el("th", h[1], h[0]); th.scope = "col"; hr.appendChild(th); });
   thead.appendChild(hr); tbl.appendChild(thead);
